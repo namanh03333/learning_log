@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "learning-log"
+version = "0.1.0"
+description = ""
+authors = ["Stefan Nguyen <stnguyenvn@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "learning_logs" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = "^4.1.13"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
