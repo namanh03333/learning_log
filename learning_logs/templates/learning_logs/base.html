@@ -1,5 +1,32 @@
-<p>
-    <a href="{% url 'learning_logs:index' %}">Learning Log</a> -
-    <a href="{% url 'learning_logs:topics' %}">Topics</a>
-</p>
-{% block content %}{% endblock content%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Learning Log</title>
+        <link rel="stylesheet" href="{% static './bulma.min.css' %}" />
+    </head>
+    <body>
+        <section class="section">
+            <div class="container">
+                <nav
+                    class="navbar"
+                    role="navigation"
+                    aria-label="main navigation"
+                >
+                    <div class="navbar-brand">
+                        <a href="{% url 'learning_logs:index' %}"
+                            >Learning Log</a
+                        >
+                    </div>
+                    -
+                    <div class="navbar-menu">
+                        <a href="{% url 'learning_logs:topics' %}">Topics</a>
+                    </div>
+                </nav>
+                {% block content %}{% endblock content%}
+            </div>
+        </section>
+    </body>
+</html>
